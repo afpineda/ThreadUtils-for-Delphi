@@ -1,12 +1,12 @@
 { *******************************************************
 
-  Threading utilities for Delphi 2009 and above
+  Threading utilities for Delphi 10 and above
 
   Utilidad para programación concurrente.
 
   *******************************************************
 
-  2020 Ángel Fernández Pineda. Madrid. Spain.
+  2012-2020 Ángel Fernández Pineda. Madrid. Spain.
 
   This work is licensed under the Creative Commons
   Attribution-ShareAlike 3.0 Unported License. To

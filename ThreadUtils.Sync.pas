@@ -1,6 +1,6 @@
 { *******************************************************
 
-  Threading utilities for Delphi 2009 and above
+  Threading utilities for Delphi 10 and above
 
   Utilidad para programación concurrente.
 

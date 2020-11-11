@@ -71,7 +71,6 @@ object Form_main: TForm_main
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 1
-    ExplicitTop = 63
   end
   object Memo_dequeue2: TMemo
     Left = 370

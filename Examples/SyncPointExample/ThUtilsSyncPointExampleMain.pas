@@ -2,7 +2,7 @@ unit ThUtilsSyncPointExampleMain;
 
 { *******************************************************
 
-  Threading utilities for Delphi 2009 and above
+  Threading utilities for Delphi 10 and above
 
   Utilidad para programación concurrente.
 
@@ -26,7 +26,9 @@ unit ThUtilsSyncPointExampleMain;
   - ThreadUtils.Sync.TThreadSyncHelper (at implementation section)
 
   This trivial example shows two different ways for waiting
-  for a bunch of threads to terminate.
+  for a bunch of threads to terminate. However, TSyncPoint
+  works best whenever you need an "OnDestroy" handler
+  (not in this example).
 
   ******************************************************* }
 
@@ -91,7 +93,7 @@ begin
   EndOfWork.Reached;
 end;
 
-// Ask for workers to stop by the means of "EndOfWork" syncpoint
+// Ask workers to stop by the means of "EndOfWork" syncpoint
 
 procedure TForm_main.Btn_stopBySyncPointClick(Sender: TObject);
 begin
@@ -109,7 +111,7 @@ begin
   stopPlease := true;
 end;
 
-// Ask for workers to stop by the means of "WaitForAll" helper method
+// Ask workers to stop by the means of "WaitForAll" helper method
 
 procedure TForm_main.Btn_stopByWaitForClick(Sender: TObject);
 begin
