@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{60DC8AD3-0493-4433-9098-1FAEB3C1FD59}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="QueueExample\ThUtilsQueueExample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SyncPointExample\ThUtilsSyncPointExample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ThUtilsQueueExample">
+        <MSBuild Projects="QueueExample\ThUtilsQueueExample.dproj"/>
+    </Target>
+    <Target Name="ThUtilsQueueExample:Clean">
+        <MSBuild Projects="QueueExample\ThUtilsQueueExample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThUtilsQueueExample:Make">
+        <MSBuild Projects="QueueExample\ThUtilsQueueExample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ThUtilsSyncPointExample">
+        <MSBuild Projects="SyncPointExample\ThUtilsSyncPointExample.dproj"/>
+    </Target>
+    <Target Name="ThUtilsSyncPointExample:Clean">
+        <MSBuild Projects="SyncPointExample\ThUtilsSyncPointExample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThUtilsSyncPointExample:Make">
+        <MSBuild Projects="SyncPointExample\ThUtilsSyncPointExample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ThUtilsQueueExample;ThUtilsSyncPointExample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ThUtilsQueueExample:Clean;ThUtilsSyncPointExample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ThUtilsQueueExample:Make;ThUtilsSyncPointExample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
