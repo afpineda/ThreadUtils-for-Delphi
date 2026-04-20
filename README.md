@@ -3,7 +3,7 @@
 This library was conceived nearly one decade before publishing.
 At the time, 
 Delphi lacked high-level thread-safe data types and synchronisation primitives, 
-and had no API for processing background events.
+and had no specific API for processing Windows messages in background.
 
 Its main motivation is the difficulty in achieving a smooth termination 
 of multi-threaded Windows applications (event-driven).
