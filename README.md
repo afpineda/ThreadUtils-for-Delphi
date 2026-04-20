@@ -48,7 +48,7 @@ of multi-threaded Windows applications (event-driven).
 - TSyncCounter:
 
   An atomic integer counter which runs a callback in the main thread
-  when a certaing count is reached or leaved.
+  when a certain count is reached or leaved.
   This was conceived as a way to keep track of pending background work
   and update the GUI accordingly.
 
