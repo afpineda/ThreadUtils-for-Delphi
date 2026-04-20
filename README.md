@@ -55,7 +55,7 @@ of multi-threaded Windows applications (event-driven).
 - TSyncPoint:
 
   Enables a "master" thread to wait for all "slave" threads to
-  reach a certain exectuion point.
+  reach a certain execution point.
   It was conceived as a way achieve gracefull program termination
   by waiting for all workers to finish before releasing resources.
 
