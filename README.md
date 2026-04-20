@@ -56,7 +56,7 @@ of multi-threaded Windows applications (event-driven).
 
   Enables a "master" thread to wait for all "slave" threads to
   reach a certain execution point.
-  It was conceived as a way achieve gracefull program termination
+  It was conceived as a way to achieve gracefull program termination
   by waiting for all workers to finish before releasing resources.
 
 - TRendezvous<T>
